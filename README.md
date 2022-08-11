@@ -32,18 +32,18 @@ You will also need to update:
 
 server.lua - this is where we actually remove the items from client.lua so will need updating too.
 
-  QBCore.Functions.CreateCallback('bae-guncrafting:server:get:ingredientpistol_suppressor', function(source, cb)
-      local src = source
-      local Ply = QBCore.Functions.GetPlayer(src)
-      local metalscrap = Ply.Functions.GetItemByName("metalscrap")
-      local steel = Ply.Functions.GetItemByName("steel")
-      local rubber = Ply.Functions.GetItemByName("rubber")
-      if metalscrap ~= nil and steel ~= nil and rubber ~= nil then
-         cb(true)
-     else
-          cb(false)
-      end
-  end)
+  	QBCore.Functions.CreateCallback('bae-guncrafting:server:get:ingredientpistol_suppressor', function(source, cb)
+      		local src = source
+      		local Ply = QBCore.Functions.GetPlayer(src)
+      		local metalscrap = Ply.Functions.GetItemByName("metalscrap")
+      		local steel = Ply.Functions.GetItemByName("steel")
+      		local rubber = Ply.Functions.GetItemByName("rubber")
+      	if metalscrap ~= nil and steel ~= nil and rubber ~= nil then
+         	cb(true)
+    	else
+          	cb(false)
+      	end
+  	end)
   
   
   Support will be very limited as this was created for the server i am currently building https://discord.gg/WNHFhBdZT8 
