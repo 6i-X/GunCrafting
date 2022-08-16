@@ -31,11 +31,11 @@ QBCore.Functions.CreateCallback('bae-guncrafting:server:get:ingredientweapon_pis
     local Ply = QBCore.Functions.GetPlayer(src)
     local metalscrap = Ply.Functions.GetItemByName("metalscrap")
     local steel = Ply.Functions.GetItemByName("steel")
-    local rubber = Ply.Functions.GetItemByName("rubber")
+    local iron = Ply.Functions.GetItemByName("iron")
     local pistol_part_trigger = Ply.Functions.GetItemByName("pistol_part_trigger")
     local pistol_part_stock = Ply.Functions.GetItemByName("pistol_part_stock")
     local pistol_part_mag = Ply.Functions.GetItemByName("pistol_part_mag")
-    if metalscrap ~= nil and steel ~= nil and rubber ~= nil and pistol_part_mag ~= nil and pistol_part_stock ~= nil and pistol_part_trigger ~= nil then
+    if metalscrap ~= nil and steel ~= nil and iron ~= nil and pistol_part_mag ~= nil and pistol_part_stock ~= nil and pistol_part_trigger ~= nil then
         cb(true)
     else
         cb(false)
@@ -47,10 +47,10 @@ QBCore.Functions.CreateCallback('bae-guncrafting:server:get:ingredientpistol_par
     local Ply = QBCore.Functions.GetPlayer(src)
     local metalscrap = Ply.Functions.GetItemByName("metalscrap")
     local steel = Ply.Functions.GetItemByName("steel")
-    local rubber = Ply.Functions.GetItemByName("rubber")
+    local iron = Ply.Functions.GetItemByName("iron")
     local aluminum = Ply.Functions.GetItemByName("aluminum")
     local pistol_part_trigger = Ply.Functions.GetItemByName("pistol_part_trigger")
-    if metalscrap ~= nil and steel ~= nil and rubber ~= nil and aluminum ~= nil and pistol_part_trigger ~= nil then
+    if metalscrap ~= nil and steel ~= nil and iron ~= nil and aluminum ~= nil and pistol_part_trigger ~= nil then
         cb(true)
     else
         cb(false)
@@ -62,24 +62,30 @@ QBCore.Functions.CreateCallback('bae-guncrafting:server:get:ingredientpistol_par
     local Ply = QBCore.Functions.GetPlayer(src)
     local metalscrap = Ply.Functions.GetItemByName("metalscrap")
     local steel = Ply.Functions.GetItemByName("steel")
-    local rubber = Ply.Functions.GetItemByName("rubber")
+    local iron = Ply.Functions.GetItemByName("iron")
     local aluminum = Ply.Functions.GetItemByName("aluminum")
     local pistol_part_stock = Ply.Functions.GetItemByName("pistol_part_stock")
-    if metalscrap ~= nil and steel ~= nil and rubber ~= nil and aluminum ~= nil and pistol_part_stock ~= nil then
+    if metalscrap ~= nil and steel ~= nil and iron~= nil and aluminum ~= nil and pistol_part_stock ~= nil then
         cb(true)
     else
         cb(false)
     end
 end)
+
 QBCore.Functions.CreateCallback('bae-guncrafting:server:get:ingredientpistol_part_mag', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
     local metalscrap = Ply.Functions.GetItemByName("metalscrap")
     local steel = Ply.Functions.GetItemByName("steel")
-    local rubber = Ply.Functions.GetItemByName("rubber")
+    local iron = Ply.Functions.GetItemByName("iron")
     local aluminum = Ply.Functions.GetItemByName("aluminum")
-    local pistol_part_mag = Ply.Functions.GetItemByName("pistol_part_mag")
-    if metalscrap ~= nil and steel ~= nil and rubber ~= nil and aluminum ~= nil and pistol_part_mag ~= nil then
+                    TriggerServerEvent('QBCore:Server:RemoveItem', "metalscrap", 140)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "steel", 250)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "iron", 60)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "aluminum", 60)
+					TriggerServerEvent('QBCore:Server:AddItem', "pistol_part_mag", 1)
+                    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["pistol_part_mag"], "add")
+    if metalscrap ~= nil and steel ~= nil and iron ~= nil and aluminum ~= nil then
         cb(true)
     else
         cb(false)
@@ -91,10 +97,10 @@ QBCore.Functions.CreateCallback('bae-guncrafting:server:get:ingredientsmg_part_t
     local Ply = QBCore.Functions.GetPlayer(src)
     local metalscrap = Ply.Functions.GetItemByName("metalscrap")
     local steel = Ply.Functions.GetItemByName("steel")
-    local rubber = Ply.Functions.GetItemByName("rubber")
+    local iron = Ply.Functions.GetItemByName("iron")
     local aluminum = Ply.Functions.GetItemByName("aluminum")
     local smg_part_trigger = Ply.Functions.GetItemByName("smg_part_trigger")
-    if metalscrap ~= nil and steel ~= nil and rubber ~= nil and aluminum ~= nil and smg_part_trigger ~= nil then
+    if metalscrap ~= nil and steel ~= nil and iron ~= nil and aluminum ~= nil and smg_part_trigger ~= nil then
         cb(true)
     else
         cb(false)
@@ -295,7 +301,7 @@ QBCore.Functions.CreateCallback('bae-guncrafting:server:get:ingredientsmg_ammo',
     local iron = Ply.Functions.GetItemByName("iron")
     local aluminum = Ply.Functions.GetItemByName("aluminum")
     if metalscrap ~= nil and steel ~= nil and iron ~= nil and aluminum ~= nil then
-        cb(true)
+        cb(true)s
     else
         cb(false)
     end

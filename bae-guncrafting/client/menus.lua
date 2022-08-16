@@ -24,7 +24,7 @@ RegisterNetEvent('bae-guncrafting:guncrafting', function(data)
 
     exports['qb-menu']:openMenu({
        {
-           header = "Weapon Crafting",
+           header = "🔫 Weapon Crafting 🔫",
            isMenuHeader = true,
        },
 
@@ -301,7 +301,7 @@ RegisterNetEvent('bae-guncrafting:guncrafting', function(data)
             },
             {
                 header = "🔫 Pistol",
-                 txt = "140 MetalScrap, 50 Steel, 60 Iron, 60 Aluminum",
+                 txt = "140 MetalScrap, 50 Steel, 60 Iron, 60 Aluminum, 1 Pistol Trigger, 1 Pistol Stock, 1 Pistol Mag",
                 params = {
                     event = "bae-guncrafting:weapon_pistol", 
                     args = {
@@ -321,7 +321,7 @@ RegisterNetEvent('bae-guncrafting:guncrafting', function(data)
             },
             {
                 header = "🔫 SMG",
-                 txt = "140 MetalScrap, 50 Steel, 60 Iron, 60 Aluminum",
+                 txt = "140 MetalScrap, 50 Steel, 60 Iron, 60 Aluminum, 1 SMG Trigger, 1 SMG Stock, 1 SMG Mag",
                 params = {
                     event = "bae-guncrafting:weapon_smg", 
                     args = {
@@ -331,7 +331,7 @@ RegisterNetEvent('bae-guncrafting:guncrafting', function(data)
             },
             {
                 header = "🔫 Compact Rifle",
-                 txt = "140 MetalScrap, 50 Steel, 60 Iron, 60 Aluminum",
+                 txt = "140 MetalScrap, 50 Steel, 60 Iron, 60 Aluminum, 1 Rifle Trigger, 1 Rifle Stock, 1 Rifle Mag",
                 params = {
                     event = "bae-guncrafting:weapon_compactrifle", 
                     args = {
