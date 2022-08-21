@@ -9,9 +9,15 @@ qb-target
 
 You can use https://emoji-copy-paste.com to grab emoji's for any QB-Menu :)
 
-You can see the script here;
+You can see the script here;update the boxzone "guncrafting"
+![image](https://user-images.githubusercontent.com/47786223/185801988-c718e9b1-c7c9-442f-a731-164fa861987f.png)
+
 
 https://www.youtube.com/watch?v=WB-F5Uvw-AM 
+
+To amend Menu Qtarget Location:
+
+Menu.lua -
 
 To amend material requirements update:
 
