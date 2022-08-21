@@ -150,7 +150,6 @@ QBCore.Functions.CreateCallback('bae-guncrafting:server:ingredientpistol_part_ma
 					TriggerServerEvent('QBCore:Server:RemoveItem', "steel", 250)
 					TriggerServerEvent('QBCore:Server:RemoveItem', "iron", 60)
 					TriggerServerEvent('QBCore:Server:RemoveItem', "aluminum", 60)
-					TriggerServerEvent('QBCore:Server:AddItem', "pistol_part_mag", 1)
                     TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["pistol_part_mag"], "add")
     if metalscrap ~= nil and steel ~= nil and iron ~= nil and aluminum ~= nil then
         cb(true)
@@ -586,7 +585,7 @@ QBCore.Functions.CreateCallback('bae-guncrafting:server:ingredientsmg_ammo', fun
     local iron = Player.Functions.GetItemByName("iron")
     local aluminum = Player.Functions.GetItemByName("aluminum")
     if metalscrap ~= nil and steel ~= nil and iron ~= nil and aluminum ~= nil then
-        cb(true)s
+        cb(true)
     else
         cb(false)
     end
