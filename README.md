@@ -2,8 +2,8 @@
 
 Requirements;
 
-qb-core
-qb-menu
+qb-core,
+qb-menu,
 qb-target
 
 
