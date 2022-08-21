@@ -2,9 +2,9 @@ local QBCore = exports['qb-core']:GetCoreObject()
 
 Citizen.CreateThread(function()
 
-exports['qb-target']:AddBoxZone("guncrafting", vector3(98.13, -1290.05, 29.71), 2.5, 1,  {
+exports['qb-target']:AddBoxZone("guncrafting", vector3(1105.31, -2327.44, 31.39), 1.4, 1.4,  {
     name="guncrafting",
-    heading=31,
+    heading=354,
     debugPoly=false,
 }, {
     options = {
